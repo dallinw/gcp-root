@@ -1,9 +1,9 @@
-#terraform {
-#  backend "remote" {
-#    organization = "dallinw"
-#
-#    workspaces {
-#      name = "gcp-root"
-#    }
-#  }
-#}
+terraform {
+  backend "remote" {
+    organization = "dallinw"
+
+    workspaces {
+      name = "gcp-root"
+    }
+  }
+}
