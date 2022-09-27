@@ -22,18 +22,18 @@ module "monitoring-dev-kz792-gb530" {
   billing_account = var.billing_account
 }
 
-#module "monitoring-nonprod-kz792-gb530" {
-#  source  = "terraform-google-modules/project-factory/google"
-#version = ">= 13"
-#
-#  name       = "monitoring-nonprod"
-#  project_id = "monitoring-nonprod-kz792-gb5300"
-#  org_id     = var.org_id
-#  folder_id  = google_folder.common.name
-#
-#  billing_account = var.billing_account
-#}
-#
+module "monitoring-nonprod-kz792-gb530" {
+  source  = "terraform-google-modules/project-factory/google"
+version = ">= 13"
+
+  name       = "monitoring-nonprod"
+  project_id = "monitoring-nonprod-kz792-gb5300"
+  org_id     = var.org_id
+  folder_id  = google_folder.common.name
+
+  billing_account = var.billing_account
+}
+
 #module "monitoring-prod-kz792-gb530" {
 #  source  = "terraform-google-modules/project-factory/google"
 #  version = "~> 12.0"
