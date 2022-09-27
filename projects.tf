@@ -1,38 +1,38 @@
-module "logging-kz792-gb530" {
-  source  = "terraform-google-modules/project-factory/google"
-  version = ">= 13"
-
-  name       = "logging"
-  project_id = "logging-kz792-ca530"
-  org_id     = var.org_id
-  folder_id  = google_folder.common.name
-
-  billing_account = var.billing_account
-}
+#module "logging-kz792-gb530" {
+#  source  = "terraform-google-modules/project-factory/google"
+#  version = ">= 13"
 #
-module "monitoring-dev-kz792-gb530" {
-  source  = "terraform-google-modules/project-factory/google"
-  version = ">= 13"
-
-  name       = "monitoring-dev"
-  project_id = "monitoring-dev-kz792-ca530"
-  org_id     = var.org_id
-  folder_id  = google_folder.common.name
-
-  billing_account = var.billing_account
-}
-
-module "monitoring-nonprod-kz792-gb530" {
-  source  = "terraform-google-modules/project-factory/google"
-version = ">= 13"
-
-  name       = "monitoring-nonprod"
-  project_id = "monitoring-nonprod-kz792-ca530"
-  org_id     = var.org_id
-  folder_id  = google_folder.common.name
-
-  billing_account = var.billing_account
-}
+#  name       = "logging"
+#  project_id = "logging-kz792-ca530"
+#  org_id     = var.org_id
+#  folder_id  = google_folder.common.name
+#
+#  billing_account = var.billing_account
+#}
+##
+#module "monitoring-dev-kz792-gb530" {
+#  source  = "terraform-google-modules/project-factory/google"
+#  version = ">= 13"
+#
+#  name       = "monitoring-dev"
+#  project_id = "monitoring-dev-kz792-ca530"
+#  org_id     = var.org_id
+#  folder_id  = google_folder.common.name
+#
+#  billing_account = var.billing_account
+#}
+#
+#module "monitoring-nonprod-kz792-gb530" {
+#  source  = "terraform-google-modules/project-factory/google"
+#version = ">= 13"
+#
+#  name       = "monitoring-nonprod"
+#  project_id = "monitoring-nonprod-kz792-ca530"
+#  org_id     = var.org_id
+#  folder_id  = google_folder.common.name
+#
+#  billing_account = var.billing_account
+#}
 
 #module "monitoring-prod-kz792-gb530" {
 #  source  = "terraform-google-modules/project-factory/google"
