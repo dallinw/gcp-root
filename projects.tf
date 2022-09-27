@@ -3,7 +3,7 @@ module "logging-kz792-gb530" {
   version = ">= 13"
 
   name       = "logging"
-  project_id = "logging-kz792-gb5300"
+  project_id = "logging-kz792-ca530"
   org_id     = var.org_id
   folder_id  = google_folder.common.name
 
@@ -15,7 +15,7 @@ module "monitoring-dev-kz792-gb530" {
   version = ">= 13"
 
   name       = "monitoring-dev"
-  project_id = "monitoring-dev-kz792-gb5300"
+  project_id = "monitoring-dev-kz792-ca530"
   org_id     = var.org_id
   folder_id  = google_folder.common.name
 
@@ -27,7 +27,7 @@ module "monitoring-nonprod-kz792-gb530" {
 version = ">= 13"
 
   name       = "monitoring-nonprod"
-  project_id = "monitoring-nonprod-kz792-gb530"
+  project_id = "monitoring-nonprod-kz792-ca530"
   org_id     = var.org_id
   folder_id  = google_folder.common.name
 
