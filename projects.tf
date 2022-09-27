@@ -27,7 +27,7 @@ module "monitoring-nonprod-kz792-gb530" {
 version = ">= 13"
 
   name       = "monitoring-nonprod"
-  project_id = "monitoring-nonprod-kz792-gb5300"
+  project_id = "monitoring-nonprod-kz792-gb530"
   org_id     = var.org_id
   folder_id  = google_folder.common.name
 
