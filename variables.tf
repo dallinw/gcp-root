@@ -9,3 +9,9 @@ variable "org_id" {
   type        = string
   default     = "674869377315"
 }
+
+variable "project_suffix" {
+  description = "GCP project names must be globally unique, so choose a unique suffix to append to project names"
+  type        = string
+  default     = "randglue5"
+}
