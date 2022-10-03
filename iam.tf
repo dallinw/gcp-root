@@ -35,22 +35,3 @@ module "development-iam" {
 
   }
 }
-
-
-module "staging-iam" {
-  source  = "terraform-google-modules/iam/google//modules/folders_iam"
-  version = "~> 7.4"
-
-  folders = [google_folder.staging.name]
-
-  bindings = {
-
-    "roles/compute.instanceAdmin.v1" = [
-      "group:gcp-developers@dallinw.com",
-    ]
-
-    "roles/container.admin" = [
-      "group:gcp-developers@dallinw.com",
-    ]
-  }
-}

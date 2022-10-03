@@ -13,5 +13,11 @@ variable "org_id" {
 variable "project_suffix" {
   description = "GCP project names must be globally unique, so choose a unique suffix to append to project names"
   type        = string
-  default     = "randglue5"
+  default     = "blue52"
+}
+
+variable "region" {
+  description = "GCP Region"
+  type        = string
+  default     = "us-east"
 }
