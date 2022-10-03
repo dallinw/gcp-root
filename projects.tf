@@ -5,7 +5,7 @@ module "logging" {
   name       = "logging"
   project_id = "logging-${var.project_suffix}"
   org_id     = var.org_id
-  folder_id  = google_folder.common.name
+  folder_id  = google_folder.common.folder_id
 
   billing_account = var.billing_account
 }
@@ -17,7 +17,7 @@ module "monitoring" {
   name       = "monitoring-dev"
   project_id = "monitoring-dev-${var.project_suffix}"
   org_id     = var.org_id
-  folder_id  = google_folder.common.name
+  folder_id  = google_folder.common.folder_id
 
   billing_account = var.billing_account
 }
@@ -29,7 +29,7 @@ module "development" {
   name       = "development"
   project_id = "development-${var.project_suffix}"
   org_id     = var.org_id
-  folder_id  = google_folder.development.name
+  folder_id  = google_folder.development.folder_id
 
   billing_account = var.billing_account
 }
