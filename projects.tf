@@ -29,7 +29,7 @@ module "development" {
   name       = "development"
   project_id = "development-${var.project_suffix}"
   org_id     = var.org_id
-  folder_id  = google_folder.common.name
+  folder_id  = google_folder.development.name
 
   billing_account = var.billing_account
 }
