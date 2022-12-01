@@ -17,12 +17,29 @@ module "organization-iam" {
   }
 }
 
-
 module "development-iam" {
   source  = "terraform-google-modules/iam/google//modules/folders_iam"
   version = "~> 7.4"
 
   folders = [google_folder.development.name]
+
+  bindings = {
+    "roles/compute.instanceAdmin.v1" = [
+      "group:gcp-developers@dallinw.com",
+    ]
+
+    "roles/container.admin" = [
+      "group:gcp-developers@dallinw.com",
+    ]
+
+  }
+}
+
+module "production-iam" {
+  source  = "terraform-google-modules/iam/google//modules/folders_iam"
+  version = "~> 7.4"
+
+  folders = [google_folder.production.name]
 
   bindings = {
     "roles/compute.instanceAdmin.v1" = [

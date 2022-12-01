@@ -33,3 +33,15 @@ module "development" {
 
   billing_account = var.billing_account
 }
+
+module "production" {
+  source  = "terraform-google-modules/project-factory/google"
+  version = ">= 13"
+
+  name       = "production"
+  project_id = "production-${var.project_suffix}"
+  org_id     = var.org_id
+  folder_id  = google_folder.production.folder_id
+
+  billing_account = var.billing_account
+}
